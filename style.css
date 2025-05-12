@@ -1,5 +1,4 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   margin: 0;
   padding: 0 100px 0 100px;
   background-color: #A100004D;
@@ -7,6 +6,7 @@ body {
 
 .container{
   background-color: #FCFCFC;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .main-el > img{
@@ -30,13 +30,26 @@ body {
   height: 81;
   gap: 10px;
   padding: 24px;
+  font-family: Open Sans;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 100%;
+  letter-spacing: 0%;
+
+}
+
+.text-el{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Open Sans;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: Headline Small/Line Height;
+  letter-spacing: 0%;
+
 }
 
 .instructions-el, 
-.ingredients-el{
-  
-}
-
+.ingredients-el,
 .suggestion-el{
   margin-left: auto;
   margin-right: auto;
