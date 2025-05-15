@@ -1,97 +1,94 @@
+/* --- Grundinställningar för sidan --- */
 body {
   margin: 0;
-  padding: 0 100px 0 100px;
+  padding: 0 100px;
   background-color: #A100004D;
 }
 
-.container{
+.container {
   background-color: #FCFCFC;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.main-el > img{
+/* --- Huvudbild --- */
+.main-el > img {
   object-fit: cover;
   width: 100%;
   height: 250px;
-  ;
-}
-.title {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
-}
-.title-el{
-  color: #A10000;
-  
 }
 
-.intro-el{
+/* --- Titel och introduktion --- */
+.title {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title-el {
+  color: #A10000;
+}
+
+.intro-el {
   background-color: #EBEBEB;
-  width: 1152;
-  height: 81;
+  width: 1152px;
+  height: 81px;
   gap: 10px;
   padding: 24px;
-  font-family: Open Sans;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 100%;
   letter-spacing: 0%;
-
 }
 
-.text-el{
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-family: Open Sans;
+/* --- Textstyling för listor och instruktioner --- */
+.text-el {
+  font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 24px;
-  line-height: Headline Small/Line Height;
+  line-height: 1.2;
   letter-spacing: 0%;
-
 }
 
-.instructions-el, 
+.instructions-el,
 .ingredients-el,
-.suggestion-el{
-  margin-left: auto;
-  margin-right: auto;
+.suggestion-el {
+  margin: 0 auto;
   padding: 20px;
-  font-family: Open Sans;
+  font-family: 'Open Sans', sans-serif;
   font-weight: 700;
   font-size: 32px;
   line-height: 100%;
   letter-spacing: 0%;
-
 }
 
-.bottom-el{
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  
-}
-
+/* --- Bilder längst ner: rad på desktop, kolumn på mindre enheter --- */
 .bottom-images {
-  display: flex;
+  display: flex;               /* använder flexbox */
+  flex-direction: row;         /* på desktop: bilder sida vid sida */
   gap: 24px;
   justify-content: center;
-  flex-wrap: wrap;
   margin-top: 30px;
 }
 
-.bottom-images > img {
-  width: 600px;
-  height: 600px;
+.bottom-images figure {
+  flex: 1;                     /* delar utrymmet lika mellan figurerna */
+  margin: 0;
+}
+
+.bottom-images figure img {
+  width: 100%;                 /* fyller sin figure-behållare */
+  height: auto;
   object-fit: cover;
 }
 
-@media (max-width: 600px) {
+/* --- Mobil och iPad: stapla bilder i kolumn --- */
+@media (max-width: 1024px) {
   .bottom-images {
-    flex-direction: column;
+    flex-direction: column;    /* kolumnlayout på skärmar upp till 1024px */
     align-items: center;
   }
 
-  .bottom-images > img {
-    width: 80%;
-    height: auto;
+  .bottom-images figure {
+    max-width: 80%;            /* maxbredd för varje bild på mobila enheter */
   }
 }
