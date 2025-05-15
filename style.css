@@ -29,8 +29,8 @@ body {
 
 .intro-el {
   background-color: #EBEBEB;
-  width: 1152px;
-  height: 81px;
+  width: 95%;
+  height: auto;
   gap: 10px;
   padding: 24px;
   font-family: 'Open Sans', sans-serif;
@@ -77,13 +77,18 @@ body {
 
 .bottom-images figure img {
   width: 100%;                 /* fyller sin figure-behållare */
-  height: auto;
+  height: 500px;
   object-fit: cover;
 }
 
 /* --- Mobil och iPad: stapla bilder i kolumn --- */
 @media (max-width: 1024px) {
-  .bottom-images {
+  .intro-el{
+    width: 80%;
+    height: auto;
+  }
+  
+   .bottom-images {
     flex-direction: column;    /* kolumnlayout på skärmar upp till 1024px */
     align-items: center;
   }
