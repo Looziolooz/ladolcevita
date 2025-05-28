@@ -7,17 +7,23 @@
     <title>Pannkakor Recept</title>
   </head>
   <body>
-    <div class="container">
+    <!-- Tillgänglighetsförbättring: Hoppa till innehåll -->
+    <a href="#main-content" class="skip-link">Hoppa till innehåll</a>
+
+    <header>
+      <!-- Här kan man lägga till logotyp eller navigering i framtiden -->
+    </header>
+
+    <main id="main-content" class="container" role="main">
 
       <!-- Huvudbild med bildtext -->
-        <div class="main-el">
-          <img src="./images/main-img.jpg" alt="Pannkakor image">
-        </div>
-      
+      <div class="main-el">
+        <img src="./images/main-img.jpg" alt="En hög med nystekta pannkakor med sylt">
+      </div>
 
       <!-- Recepttitel och introduktion -->
-      <div class="title">
-        <h1 class="title-el">Enkelt recept på pannkakor</h1>
+      <section class="title">
+        <h1 class="title-el" aria-label="Recepttitel">Enkelt recept på pannkakor</h1>
         <p class="intro-el">Gör traditionella tunna pannkakor med detta enkla och goda pannkaksrecept.</p>
 
         <!-- Ingredienslista -->
@@ -43,21 +49,25 @@
         </ol>
 
         <!-- Förslag på servering -->
-        <p class="suggestion-el">Serveringsförslag</p>
+        <h2 class="suggestion-el">Serveringsförslag</h2>
 
         <!-- Extra bilder med bildtext -->
         <div class="bottom-images">
           <figure>
-            <img src="./images/pannkakor 2.jpg" alt="Pannkakor image">
-            <figcaption>Pannkakor med en citron vid sidan om.</figcaption>
+            <img src="./images/pannkakor 2.jpg" alt="Pannkakor med citron vid sidan om" aria-describedby="desc1">
+            <figcaption id="desc1">Pannkakor med en citron vid sidan om.</figcaption>
           </figure>
           <figure>
-            <img src="./images/pannkakor 3.jpg" alt="Pannkakor image">
-            <figcaption>Pannkaka med citronbitar, citronskal och grädde.</figcaption>
+            <img src="./images/pannkakor 3.jpg" alt="Pannkaka med citronbitar och grädde" aria-describedby="desc2">
+            <figcaption id="desc2">Pannkaka med citronbitar, citronskal och grädde.</figcaption>
           </figure>
         </div>
+      </section>
 
-      </div>
-    </div>
+    </main>
+
+    <footer>
+      <p style="text-align:center; font-size: 14px;">© 2025 Lorenzo Dastoli. Alla rättigheter förbehållna.</p>
+    </footer>
   </body>
 </html>

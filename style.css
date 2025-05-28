@@ -2,12 +2,27 @@
 body {
   margin: 0;
   padding: 0 100px;
-  background-color: #A100004D;
+  background-color: #FFF5F5; /* bättre kontrast jämfört med tidigare röd */
+  color: #000; /* kontrastrik text */
 }
 
 .container {
   background-color: #FCFCFC;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* --- Tillgänglighetslänk för tangentbordsanvändare --- */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #A10000;
+  color: white;
+  padding: 8px;
+  z-index: 100;
+}
+.skip-link:focus {
+  top: 0;
 }
 
 /* --- Huvudbild --- */
@@ -36,7 +51,7 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   font-size: 24px;
-  line-height: 100%;
+  line-height: 1.4;
   letter-spacing: 0%;
 }
 
@@ -44,9 +59,10 @@ body {
 .text-el {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
-  font-size: 24px;
-  line-height: 1.2;
+  font-size: 22px;
+  line-height: 1.5;
   letter-spacing: 0%;
+  max-width: 65ch;
 }
 
 .instructions-el,
@@ -63,37 +79,43 @@ body {
 
 /* --- Bilder längst ner: rad på desktop, kolumn på mindre enheter --- */
 .bottom-images {
-  display: flex;               /* använder flexbox */
-  flex-direction: row;         /* på desktop: bilder sida vid sida */
+  display: flex;
+  flex-direction: row;
   gap: 24px;
   justify-content: center;
   margin-top: 30px;
 }
 
 .bottom-images figure {
-  flex: 1;                     /* delar utrymmet lika mellan figurerna */
+  flex: 1;
   margin: 0;
 }
 
 .bottom-images figure img {
-  width: 100%;                 /* fyller sin figure-behållare */
+  width: 100%;
   height: 500px;
   object-fit: cover;
 }
 
+/* --- Tangentbordsfokus --- */
+:focus {
+  outline: 3px solid #A10000;
+  outline-offset: 2px;
+}
+
 /* --- Mobil och iPad: stapla bilder i kolumn --- */
 @media (max-width: 1024px) {
-  .intro-el{
+  .intro-el {
     width: 80%;
     height: auto;
   }
-  
-   .bottom-images {
-    flex-direction: column;    /* kolumnlayout på skärmar upp till 1024px */
+
+  .bottom-images {
+    flex-direction: column;
     align-items: center;
   }
 
   .bottom-images figure {
-    max-width: 80%;            /* maxbredd för varje bild på mobila enheter */
+    max-width: 80%;
   }
 }
