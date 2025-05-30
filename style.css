@@ -11,19 +11,6 @@ body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* --- Tillgänglighetslänk för tangentbordsanvändare --- */
-.skip-link {
-  position: absolute;
-  top: -40px;
-  left: 0;
-  background: #A10000;
-  color: white;
-  padding: 8px;
-  z-index: 100;
-}
-.skip-link:focus {
-  top: 0;
-}
 
 /* --- Huvudbild --- */
 .main-el > img {
